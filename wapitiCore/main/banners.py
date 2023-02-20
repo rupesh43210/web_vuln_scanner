@@ -67,7 +67,7 @@ def print_banner():
 
     print(choice(banners))
     print(f"MS/ECE2 Pentest as Service (bosch.co.in)")
-    print("For a detailed report kindly contact MS/ECE2")
+    print("For a detailed Pentest report kindly contact MS/ECE2")
     moon_phase = phase()
     if moon_phase == "full":
         print("[*] You are lucky! Full moon tonight.")
