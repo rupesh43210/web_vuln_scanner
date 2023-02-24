@@ -615,7 +615,7 @@ class Wapiti:
                 html_content = f.read()
 
                 url = 'https://oyzlq132ha.execute-api.ap-southeast-1.amazonaws.com/aplha1/ec2instancereport'
-                myobj = {'html': str(html_content), 'id' :self.server}
+                myobj = {'html': str(html_content), 'id':self.server}
                 x = requests.post(url, json = myobj)
                 
         await self.persister.close()
