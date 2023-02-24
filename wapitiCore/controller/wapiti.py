@@ -20,6 +20,7 @@ import asyncio
 import os
 import shutil
 import sys
+import requests
 from operator import attrgetter
 from collections import deque
 from dataclasses import replace
